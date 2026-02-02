@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('SL-111121-46670-119.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* centers the container vertically */
+}
+
+.container {
+    background: transparent; /* removed the white/pink background */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    box-shadow: none; /* remove shadow if you want it completely clean */
+    border: none; /* remove the white border too, if you don’t want it */
+    position: relative;
+}
+
+
+/* Hide elements initially */
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #d6336c;
+}
+
+h2 {
+    margin: 15px 0;
+    color: #c2255c;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative; /* needed for absolute positioning of No button */
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+.no {
+    background: #ddd;
+    position: absolute;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+    border: 3px solid white; /* add border to image */
+}
+
+/* Rose bloom animation */
+.rose {
+    position: absolute;
+    bottom: -40px;
+    font-size: 30px;
+    animation: rise 4s ease-out forwards;
+}
+
+@keyframes rise {
+    0% {
+        transform: scale(0.2) translateY(0);
+        opacity: 0;
+    }
+    30% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(-600px);
+        opacity: 0;
+    }
+}
