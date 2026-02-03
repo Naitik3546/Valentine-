@@ -75,21 +75,21 @@ button {
 /* Fireworks */
 .firework {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: red;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    animation: explode 1s ease-out forwards;
+    animation: firework 1.2s ease-out forwards;
 }
 
-@keyframes explode {
-    from {
+@keyframes firework {
+    0% {
         transform: scale(1);
         opacity: 1;
     }
-    to {
-        transform: scale(6);
+    100% {
+        transform: scale(12);
         opacity: 0;
     }
 }
+
 
