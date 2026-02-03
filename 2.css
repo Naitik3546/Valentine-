@@ -72,25 +72,24 @@ button {
     border: 3px solid white; /* add border to image */
 }
 
-/* Rose bloom animation */
-.rose {
+/* Fireworks */
+.firework {
     position: absolute;
-    bottom: -40px;
-    font-size: 30px;
-    animation: rise 4s ease-out forwards;
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
 }
 
-@keyframes rise {
-    0% {
-        transform: scale(0.2) translateY(0);
-        opacity: 0;
-    }
-    30% {
-        transform: scale(1.2);
+@keyframes explode {
+    from {
+        transform: scale(1);
         opacity: 1;
     }
-    100% {
-        transform: scale(1) translateY(-600px);
+    to {
+        transform: scale(6);
         opacity: 0;
     }
 }
+
