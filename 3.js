@@ -16,22 +16,27 @@ function yesClick() {
     startFireworks();
     startRoses();   // 🌹 ADD THIS LINE
 }
-
-
-function startRoses() {
-    for (let i = 0; i < 15; i++) {
-        setTimeout(createRose, i * 300);
+function startFireworks() {
+    for (let i = 0; i < 30; i++) {
+        setTimeout(createFirework, i * 120);
     }
 }
 
-function createRose() {
-    const rose = document.createElement("div");
-    rose.className = "rose";
-    rose.innerHTML = "🌹";
+function createFirework() {
+    for (let i = 0; i < 12; i++) {
+        const spark = document.createElement("div");
+        spark.className = "firework";
 
-    rose.style.left = Math.random() * window.innerWidth + "px";
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight / 1.5;
 
-    document.body.appendChild(rose);
+        spark.style.left = x + "px";
+        spark.style.top = y + "px";
+        spark.style.background = `hsl(${Math.random() * 360}, 100%, 60%)`;
 
-    setTimeout(() => rose.remove(), 4000);
+        document.body.appendChild(spark);
+
+        setTimeout(() => spark.remove(), 1200);
+    }
 }
+
